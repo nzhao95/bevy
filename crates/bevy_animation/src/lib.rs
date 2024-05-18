@@ -184,7 +184,7 @@ impl AnimationClip {
 
     /// Returns `None` if this clip doesn't animate the target.
     #[inline]
-    pub fn get_curves_by_path_mut(&self, path: &EntityPath) -> Option<&'_ mut Vec<VariableCurve>>  {
+    pub fn get_curves_by_path_mut(&mut self, path: &EntityPath) -> Option<&'_ mut Vec<VariableCurve>>  {
         self.paths.get(path).and_then(|id| self.curves.get_mut(*id))
     }
 
